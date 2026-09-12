@@ -28,7 +28,8 @@
         <img src="./logo-zomax.png" alt="ZOMAX" width="133" height="32">
       </a>
       <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="#soluciones">Soluciones</a><a href="#casos">Casos reales</a><a href="#proceso">Cómo trabajamos</a>
+        <a href="#soluciones">Soluciones</a><a href="#casos">Casos reales</a><a href="#proceso">Cómo trabajamos</a><a
+          href="#nosotros">Nosotros</a>
       </nav>
       <button class="button button-outline header-cta" data-contact="agenda">Hablemos <i data-icon="arrow"></i></button>
       <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú"><i
@@ -36,54 +37,27 @@
     </div>
     <nav id="mobile-menu" class="mobile-nav" aria-label="Navegación móvil" hidden>
       <a href="#soluciones">Soluciones</a><a href="#casos">Casos reales</a><a href="#proceso">Cómo trabajamos</a><a
-        href="#contacto">Hablemos</a>
+        href="#nosotros">Nosotros</a><a href="#contacto">Hablemos</a>
     </nav>
   </header>
   <main id="contenido">
-    <section class="hero container" id="inicio" aria-labelledby="hero-title">
+    <section class="hero hero-clean container" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title">Tu empresa creció.<br>Tus sistemas se<br><span>quedaron atrás.</span></h1>
+        <h1 id="hero-title">Tu empresa creció.<br>Tus sistemas se <span>quedaron atrás.</span></h1>
         <p class="hero-description">Diseñamos sistemas de gestión, automatizaciones y paneles financieros a medida de tu
           operación. Hablás directo con los ingenieros que los construyen.</p>
-        <div class="hero-actions"><button class="button button-primary" data-contact="agenda">Agendar diagnóstico
-            técnico <i data-icon="arrow"></i></button><span class="appointment-note">15 min · Sin cargo</span></div>
+        <div class="hero-actions">
+          <button class="button button-primary" data-contact="agenda">Agendar diagnóstico técnico <i
+              data-icon="arrow"></i></button>
+          <button class="button button-secondary" data-contact="email"><i data-icon="mail"></i> Contactanos</button>
+          <span class="appointment-note">15 min · Sin cargo</span>
+        </div>
         <p class="friction">Revisamos la viabilidad técnica de tu proyecto sin compromiso.</p>
-      </div>
-      <div class="dashboard">
-        <div class="dashboard-eyebrow mono"><span class="status-dot"></span> SIMULACIÓN INTERACTIVA <i
-            data-icon="sliders"></i></div>
-        <h2>Menos carga. Más control.</h2>
-        <div class="metric-grid">
-          <div class="metric"><span class="metric-icon"><i data-icon="clock"></i></span>
-            <div><strong><output id="hours" for="manual-time">30</output> h <small>/ mes</small></strong><span>PARA
-                RECUPERAR</span></div>
-          </div>
-          <div class="metric"><span class="metric-icon"><i data-icon="settings"></i></span>
-            <div><strong><output id="processes-count">3</output> <small
-                  id="processes-unit">procesos</small></strong><span>AUTOMATIZADOS</span></div>
-          </div>
+        <div class="hero-highlights">
+          <span><i data-icon="check-circle"></i> Trato directo con los fundadores</span>
+          <span><i data-icon="check-circle"></i> Código y base de datos de tu empresa</span>
+          <span><i data-icon="check-circle"></i> Alcance cerrado y entregas semanales</span>
         </div>
-        <div class="chart-panel">
-          <div class="chart-header"><span class="mono">CARGA OPERATIVA</span><span
-              class="chart-legend"><span>Antes</span><span>Después</span></span></div>
-          <div class="bar-chart" aria-hidden="true">
-            <div class="bar-group before"><b style="--bar:76%"></b><b style="--bar:94%"></b><b style="--bar:79%"></b><b
-                style="--bar:66%"></b><b style="--bar:62%"></b><b style="--bar:54%"></b><b style="--bar:42%"></b></div>
-            <div class="bar-group after"><b style="--bar:24%"></b><b style="--bar:29%"></b><b style="--bar:33%"></b><b
-                style="--bar:23%"></b><b style="--bar:21%"></b><b style="--bar:16%"></b><b style="--bar:17%"></b></div>
-          </div>
-          <div class="range-caption"><label for="manual-time">Tiempo repetitivo por día</label><output id="minutes"
-              for="manual-time">90 min</output></div>
-          <input type="range" id="manual-time" min="15" max="240" step="15" value="90"
-            aria-describedby="simulation-note">
-        </div>
-        <div class="workflow-panel"><span class="mono">TU PROCESO, AUTOMATIZADO</span>
-          <div class="workflow"><span><i data-icon="file"></i> Presupuesto</span><i data-icon="arrow"></i><span><i
-                data-icon="receipt"></i> Factura</span><i data-icon="arrow"></i><span><i data-icon="check-circle"></i>
-              Cobro</span></div>
-        </div>
-        <p class="simulation-note" id="simulation-note">Ejemplo ilustrativo, no resultados de clientes. Estimación sobre
-          20 días hábiles si automatizás ese tiempo.</p>
       </div>
     </section>
     <div class="proof-strip container"><span class="mono">SISTEMAS QUE YA ESTÁN EN PRODUCCIÓN</span>
@@ -238,6 +212,51 @@
         <p>Validás cada avance. Sabés qué sigue.</p><span></span>
       </div>
     </section>
+    <section class="section container" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="section-title">
+        <p class="eyebrow">EQUIPO FUNDADOR</p>
+        <h2 id="nosotros-title">Quiénes construyen tu sistema.</h2>
+        <p class="section-subtitle">Hablás, definís y trabajás directo con nosotros dos. Sin intermediarios comerciales
+          ni capas burocráticas.</p>
+      </div>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-badge mono">CO-FOUNDER</div>
+          <div class="team-header">
+            <div class="team-avatar mono">AM</div>
+            <div>
+              <h3>Agustin Manteiga</h3>
+              <p class="team-role mono">CO-FOUNDER &amp; DESARROLLADOR</p>
+            </div>
+          </div>
+          <p class="team-bio">Especializado en diseño de arquitectura de software, infraestructura cloud y desarrollo de
+            sistemas robustos para conectar y escalar la operación de tu empresa.</p>
+          <div class="team-tags mono">
+            <span>ARQUITECTURA</span><span>SISTEMAS</span><span>INTEGRACIONES</span>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="team-badge mono">CO-FOUNDER</div>
+          <div class="team-header">
+            <div class="team-avatar mono">YZ</div>
+            <div>
+              <h3>Yoel Zoff</h3>
+              <p class="team-role mono">CO-FOUNDER &amp; DESARROLLADOR</p>
+            </div>
+          </div>
+          <p class="team-bio">Especializado en ingeniería de datos, automatización de circuitos operativos y desarrollo
+            de soluciones a medida con foco en rentabilidad y control de gestión.</p>
+          <div class="team-tags mono">
+            <span>AUTOMATIZACIÓN</span><span>RENTABILIDAD</span><span>CONTROL</span>
+          </div>
+        </article>
+      </div>
+      <div class="team-reassurance">
+        <i data-icon="check-circle"></i>
+        <span>No delegamos tu proyecto ni subcontratamos: el software de tu empresa lo pensamos y
+          programamos nosotros dos.</span>
+      </div>
+    </section>
     <section class="section section-band" aria-labelledby="difference-title">
       <div class="container difference-grid">
         <div class="difference-copy">
@@ -338,7 +357,9 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer container"><a class="brand brand-logo" href="#inicio" aria-label="ZOMAX, inicio"><img src="./logo-zomax.png" alt="ZOMAX" width="105" height="25"></a><span>Software a medida · Argentina</span></footer>
+  <footer class="site-footer container"><a class="brand brand-logo" href="#inicio" aria-label="ZOMAX, inicio"><img
+        src="./logo-zomax.png" alt="ZOMAX" width="105" height="25"></a><span>Software a medida · Argentina</span>
+  </footer>
   <dialog id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-note">
     <button class="close-dialog icon-button" aria-label="Cerrar"><i data-icon="close"></i></button>
     <p class="eyebrow" id="contact-badge">DIAGNÓSTICO TÉCNICO · 15 MIN</p>

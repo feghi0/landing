@@ -28,55 +28,7 @@ const renderIcons = (container = document) => {
 };
 renderIcons();
 
-// --- 3. SIMULADOR INTERACTIVO (Hero) ---
-const range = document.querySelector('#manual-time');
-const beforeBars = document.querySelectorAll('.bar-group.before b');
-const afterBars = document.querySelectorAll('.bar-group.after b');
-const processesCount = document.querySelector('#processes-count');
-const processesUnit = document.querySelector('#processes-unit');
-const baseBefore = [76, 94, 79, 66, 62, 54, 42];
-
-const updateEstimate = () => {
-  if (!range) return;
-  const minutes = Number(range.value);
-  document.querySelector('#minutes').textContent = `${minutes} min`;
-  const monthlyHours = minutes * 20 / 60;
-  document.querySelector('#hours').textContent = new Intl.NumberFormat('es-AR', { maximumFractionDigits: 1 }).format(monthlyHours);
-  range.style.setProperty('--progress', `${(minutes - 15) / 225 * 100}%`);
-
-  // Escalar dinámicamente las barras según los minutos diarios seleccionados
-  const scale = minutes / 90;
-  beforeBars.forEach((bar, idx) => {
-    const base = baseBefore[idx] || 70;
-    const computedBefore = Math.min(100, Math.max(16, Math.round(base * (0.35 + 0.65 * scale))));
-    bar.style.setProperty('--bar', `${computedBefore}%`);
-  });
-
-  afterBars.forEach((bar, idx) => {
-    const base = baseBefore[idx] || 70;
-    // El software reduce drásticamente la carga a ~25-28% residual
-    const computedAfter = Math.min(36, Math.max(10, Math.round(base * 0.28 * (0.7 + 0.3 * scale))));
-    bar.style.setProperty('--bar', `${computedAfter}%`);
-  });
-
-  // Procesos estimados según la carga horaria
-  if (processesCount) {
-    let procs = 3;
-    if (minutes <= 30) procs = 1;
-    else if (minutes <= 60) procs = 2;
-    else if (minutes <= 120) procs = 3;
-    else if (minutes <= 180) procs = 4;
-    else procs = 5;
-    processesCount.textContent = procs >= 5 ? '5+' : procs;
-    if (processesUnit) {
-      processesUnit.textContent = procs === 1 ? 'proceso' : 'procesos';
-    }
-  }
-};
-if (range) {
-  range.addEventListener('input', updateEstimate);
-  updateEstimate();
-}
+// --- MENÚ MÓVIL ---
 
 // --- MENÚ MÓVIL ---
 const menu = document.querySelector('#mobile-menu');
