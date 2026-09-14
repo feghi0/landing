@@ -238,3 +238,33 @@ dialog{background:#121a22;color:var(--text);border:1px solid #3a4e59;border-radi
 
 
 
+
+/* Four production cases: product systems above, client storefronts together below. */
+.case-grid--four { grid-template-columns: 1.15fr 1fr; }
+.case-grid--four .case-zoma { grid-row: auto; grid-column: auto; }
+.case-grid--four .case-libretax,
+.case-grid--four .case-five,
+.case-grid--four .case-anamary { display: flex; flex-direction: column; align-items: flex-start; }
+.case-grid--four .case-libretax .margin-equation { margin-top: auto; width: 100%; }
+.case-grid--four .case-libretax > p { margin-bottom: 28px; }
+.case-grid--four .catalog-strip { width: 100%; flex-wrap: wrap; gap: 14px; }
+.case-grid--four .catalog-strip > span + span::before { margin-right: 14px; }
+.case-grid--four .case-five .text-link,
+.case-grid--four .case-anamary .text-link { margin-top: auto; }
+.wordmark-anamary { font-family: Georgia, 'Times New Roman', serif; font-size: 21px; letter-spacing: .035em; white-space: nowrap; line-height: 1.3; }
+.wordmark-anamary small { display: block; font: 10px/1.5 Inter, Arial, sans-serif; letter-spacing: .26em; text-align: center; }
+.case-anamary { scroll-margin-top: 16px; }
+.case-anamary .case-brand { flex-wrap: wrap; }
+.case-anamary .case-brand > .mono { border-left: 0; padding-left: 0; }
+.project-wordmarks { flex-wrap: wrap; justify-content: flex-end; }
+@media (max-width: 1200px) {
+  .proof-strip { flex-direction: column; align-items: flex-start; }
+  .project-wordmarks { justify-content: flex-start; }
+}
+@media (max-width: 720px) {
+  .case-grid--four { grid-template-columns: 1fr; }
+  .project-wordmarks { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 20px; }
+  .project-wordmarks > span + span { border-left: 0; padding-left: 0; }
+  .project-wordmarks > span { display: block; }
+  .project-wordmarks .wordmark-anamary small { text-align: left; }
+}
